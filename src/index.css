@@ -1,0 +1,56 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-brand-navy: #050A14;
+  --color-brand-accent: #10B981;
+  --color-brand-gold: #C5A059;
+  --color-brand-red: #E01933;
+  --color-brand-paper: #FDFCFB;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-paper text-slate-900 font-sans antialiased;
+  }
+  
+  h1, h2, h3 {
+    @apply font-serif tracking-tight;
+  }
+}
+
+.glass-card {
+  @apply bg-white/40 backdrop-blur-xl border border-white/40 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)];
+}
+
+.premium-shadow {
+  @apply shadow-[0_20px_50px_rgba(8,_112,_184,_0.05)];
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-linear-to-br from-brand-navy via-slate-700 to-brand-accent;
+}
+
+.section-padding {
+  @apply py-16 md:py-32 px-4 sm:px-6;
+}
+
+.container-width {
+  @apply max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-8;
+}
+
+/* Custom scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-50;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-200 rounded-full hover:bg-slate-300 transition-colors;
+}
