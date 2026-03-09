@@ -5,11 +5,11 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Playfair Display", serif;
   
-  --color-brand-navy: #050A14;
-  --color-brand-accent: #10B981;
-  --color-brand-gold: #C5A059;
-  --color-brand-red: #E01933;
-  --color-brand-paper: #FDFCFB;
+  --color-brand-navy: #002868;
+  --color-brand-accent: #BF0A30;
+  --color-brand-red: #BF0A30;
+  --color-brand-paper: #F8F9FA;
+  --color-brand-blue: #0052A5;
 }
 
 @layer base {
@@ -40,6 +40,16 @@
 
 .container-width {
   @apply max-w-7xl mx-auto w-full px-4 sm:px-6 md:px-8;
+}
+
+@layer utilities {
+  @keyframes slow-zoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
+  }
+  .animate-slow-zoom {
+    animation: slow-zoom 20s ease-in-out infinite alternate;
+  }
 }
 
 /* Custom scrollbar for premium feel */
